@@ -1,0 +1,29 @@
+// styles.less
+
+@primary-color: #dc7a1e;
+@secondary-color: #a997e4;
+@font-stack: Arial, sans-serif;
+
+.box-shadow(@x: 0, @y: 0, @blur: 10px, @color: rgba(0, 0, 0, 0.5)) {
+    box-shadow: @x @y @blur @color;
+}
+
+body {
+    font-family: @font-stack;
+    color: @primary-color;
+    background-color: lighten(@secondary-color, 40%);
+}
+
+.container {
+    padding: 20px;
+    background-color: @secondary-color;
+    .box-shadow(2px, 2px, 5px);
+
+    h2 {
+        color: lighten(@primary-color, 20%);
+    }
+
+    p {
+        color: darken(@primary-color, 20%);
+    }
+}

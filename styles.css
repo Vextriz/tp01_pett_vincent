@@ -1,0 +1,16 @@
+body {
+  font-family: Arial, sans-serif;
+  color: #dc7a1e;
+  background-color: #ffffff;
+}
+.container {
+  padding: 20px;
+  background-color: #a997e4;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+.container h2 {
+  color: #ecae74;
+}
+.container p {
+  color: #824812;
+}

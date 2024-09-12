@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de Compte Client</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles.css"> 
+</head>
+<body>
+    <header class="bg-primary text-white text-center py-4">
+        <h1>Formulaire de Compte Client</h1>
+    </header>
+
+    <main class="container mt-5">
+        <section id="form">
+            <h2 class="mb-4">Créer un compte client</h2>
+            <form id="clientForm" action="#" method="post" novalidate>
+                <div class="form-group">
+                    <label for="civilite">Civilité :</label>
+                    <select class="form-control" id="civilite" name="civilite" required>
+                        <option value="">Sélectionnez</option>
+                        <option value="Monsieur">Monsieur</option>
+                        <option value="Madame">Madame</option>
+                        <option value="Mademoiselle">Mademoiselle</option>
+                    </select>
+                    <div class="invalid-feedback">Veuillez sélectionner votre civilité.</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="nom">Nom :</label>
+                    <input type="text" class="form-control" id="nom" name="nom" required pattern="[A-Za-zÀ-ÿ\s'-]+" title="Le nom ne doit contenir que des lettres, des espaces, des tirets ou des apostrophes."/>
+                    <div class="invalid-feedback">Veuillez entrer un nom valide.</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="prenom">Prénom :</label>
+                    <input type="text" class="form-control" id="prenom" name="prenom" required pattern="[A-Za-zÀ-ÿ\s'-]+" title="Le prénom ne doit contenir que des lettres, des espaces, des tirets ou des apostrophes."/>
+                    <div class="invalid-feedback">Veuillez entrer un prénom valide.</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="adresse">Adresse :</label>
+                    <input type="text" class="form-control" id="adresse" name="adresse" required title="Veuillez entrer votre adresse complète."/>
+                    <div class="invalid-feedback">Veuillez entrer une adresse valide.</div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="cp">Code Postal :</label>
+                        <input type="text" class="form-control" id="cp" name="cp" required pattern="\d{5}" title="Le code postal doit contenir exactement 5 chiffres."/>
+                        <div class="invalid-feedback">Veuillez entrer un code postal valide (5 chiffres).</div>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="ville">Ville :</label>
+                        <input type="text" class="form-control" id="ville" name="ville" required pattern="[A-Za-zÀ-ÿ\s'-]+" title="La ville ne doit contenir que des lettres, des espaces, des tirets ou des apostrophes."/>
+                        <div class="invalid-feedback">Veuillez entrer une ville valide.</div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="tel">Téléphone :</label>
+                    <input type="tel" class="form-control" id="tel" name="tel" required pattern="\d{10}" title="Le numéro de téléphone doit contenir exactement 10 chiffres."/>
+                    <div class="invalid-feedback">Veuillez entrer un numéro de téléphone valide (10 chiffres).</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email :</label>
+                    <input type="email" class="form-control" id="email" name="email" required title="Veuillez entrer une adresse email valide."/>
+                    <div class="invalid-feedback">Veuillez entrer une adresse email valide.</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="login">Login :</label>
+                    <input type="text" class="form-control" id="login" name="login" required pattern="[A-Za-z0-9]{5,}" title="Le login doit contenir au moins 5 caractères alphanumériques."/>
+                    <div class="invalid-feedback">Veuillez entrer un login valide (au moins 5 caractères alphanumériques).</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Mot de passe :</label>
+                    <input type="password" class="form-control" id="password" name="password" required minlength="8" title="Le mot de passe doit contenir au moins 8 caractères."/>
+                    <div class="invalid-feedback">Le mot de passe doit contenir au moins 8 caractères.</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm_password">Confirmation du mot de passe :</label>
+                    <input type="password" class="form-control" id="confirm_password" name="confirm_password" required title="Veuillez confirmer votre mot de passe."/>
+                    <div class="invalid-feedback">Les mots de passe ne correspondent pas.</div>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Créer le compte</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="bg-primary text-white text-center py-3 mt-5">
+        <p>&copy; PETT Vincent ENT.</p>
+        <p><a class="text-white" href="#home">Retour en haut</a></p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="validation.js"></script>
+</body>
+</html>
